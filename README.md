@@ -28,6 +28,7 @@ model calls and evaluations are real and run on Chalk.
 | `build_datasets.py` | Runs the two offline queries and writes one evaluation dataset per context |
 | `evals.py` | The agent (a Chalk function calling a model through the Chalk model gateway), two scorers, and both evaluation runs |
 | `record_timeline.py` | Weekly snapshots of a few accounts, for scrubbing through time |
+| `export_page_data.py` | Condenses `results/` into the data behind the demo page |
 | `results/` | The datasets, evaluation results and snapshots from the recorded run |
 
 ## How time-correctness works here
