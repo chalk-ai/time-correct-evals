@@ -1,0 +1,6 @@
+# Scripts that run on a laptop: they build datasets, deploy functions and run evaluations.
+generate_history.py
+build_datasets.py
+evals.py
+record_timeline.py
+results/

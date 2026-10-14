@@ -1,0 +1,16 @@
+{
+  "point_in_time": {
+    "evaluation_id": "cmv7laulg00bm014gegt1uhfb",
+    "evaluation_run_id": "ad17724e-b764-4561-99e1-1bc96f8c2197",
+    "status": "EvaluationRunStatus.SUCCEEDED",
+    "decision-matches-outcome": 0.8056,
+    "cites-only-past-evidence": 1.0
+  },
+  "current_values": {
+    "evaluation_id": "cmv7laym2000t01wfn9hsqvk3",
+    "evaluation_run_id": "69e0f548-6907-4c8f-bd86-9d88a1c84f17",
+    "status": "EvaluationRunStatus.SUCCEEDED",
+    "decision-matches-outcome": 1.0,
+    "cites-only-past-evidence": 0.0
+  }
+}

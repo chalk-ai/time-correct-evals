@@ -1,0 +1,12 @@
+{
+  "branch": "time-correct-evals",
+  "run_at": "2026-10-14T04:02:54+00:00",
+  "point_in_time": {
+    "offline_query_dataset_id": "8c86dfdd-d538-44fa-9f6d-263c18b901b8",
+    "rows": 36
+  },
+  "current_values": {
+    "offline_query_dataset_id": "62594891-b2c1-4beb-9be5-51e2edac5ad4",
+    "rows": 36
+  }
+}

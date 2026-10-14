@@ -1,0 +1,2781 @@
+{
+ "recordedAt": "2026-10-14T04:02:54+00:00",
+ "model": "anthropic/claude-sonnet-5-5",
+ "runs": {
+  "pointInTime": {
+   "evaluationId": "cmv7laulg00bm014gegt1uhfb",
+   "evaluationRunId": "ad17724e-b764-4561-99e1-1bc96f8c2197",
+   "offlineQueryDatasetId": "8c86dfdd-d538-44fa-9f6d-263c18b901b8",
+   "cases": 36,
+   "decisionMatchesOutcome": 0.8056,
+   "citesOnlyPastEvidence": 1.0
+  },
+  "currentValues": {
+   "evaluationId": "cmv7laym2000t01wfn9hsqvk3",
+   "evaluationRunId": "69e0f548-6907-4c8f-bd86-9d88a1c84f17",
+   "offlineQueryDatasetId": "62594891-b2c1-4beb-9be5-51e2edac5ad4",
+   "cases": 36,
+   "decisionMatchesOutcome": 1.0,
+   "citesOnlyPastEvidence": 0.0
+  }
+ },
+ "byKind": [
+  {
+   "kind": "latent_fraud",
+   "label": "Fraud that surfaced later",
+   "cases": 7,
+   "pointInTimeCorrect": 0,
+   "currentValuesCorrect": 7
+  },
+  {
+   "kind": "visible_fraud",
+   "label": "Fraud visible at the time",
+   "cases": 7,
+   "pointInTimeCorrect": 7,
+   "currentValuesCorrect": 7
+  },
+  {
+   "kind": "false_alarm",
+   "label": "False alarm",
+   "cases": 5,
+   "pointInTimeCorrect": 5,
+   "currentValuesCorrect": 5
+  },
+  {
+   "kind": "legitimate",
+   "label": "Legitimate",
+   "cases": 17,
+   "pointInTimeCorrect": 17,
+   "currentValuesCorrect": 17
+  }
+ ],
+ "cases": [
+  {
+   "id": "CASE-0081",
+   "accountId": "QB-1034",
+   "kind": "false_alarm",
+   "outcome": "legitimate",
+   "openedAt": "2026-05-04T19:10:00+00:00",
+   "amount": 1063.32,
+   "merchant": "Hearthstone Home",
+   "claim": "I was charged for something I cancelled.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0070",
+   "accountId": "QB-1028",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-05-05T09:42:00+00:00",
+   "amount": 449.1,
+   "merchant": "Fernwood Outfitters",
+   "claim": "I was charged twice for the same order.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0044",
+   "accountId": "QB-1013",
+   "kind": "latent_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-05-09T10:49:00+00:00",
+   "amount": 1744.31,
+   "merchant": "Skylark Air",
+   "claim": "I don't recognize this charge.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": false,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0067",
+   "accountId": "QB-1025",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-05-11T09:26:00+00:00",
+   "amount": 163.23,
+   "merchant": "Cobalt Footwear",
+   "claim": "I cancelled and was still billed.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0021",
+   "accountId": "QB-1006",
+   "kind": "visible_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-05-12T14:28:00+00:00",
+   "amount": 853.07,
+   "merchant": "Skylark Air",
+   "claim": "The package never showed up.",
+   "pointInTime": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0048",
+   "accountId": "QB-1014",
+   "kind": "latent_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-05-21T10:37:00+00:00",
+   "amount": 1473.41,
+   "merchant": "Kiln & Co",
+   "claim": "This purchase wasn't made by me.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": false,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0075",
+   "accountId": "QB-1031",
+   "kind": "false_alarm",
+   "outcome": "legitimate",
+   "openedAt": "2026-05-22T19:44:00+00:00",
+   "amount": 570.61,
+   "merchant": "Meridian Rail",
+   "claim": "I was charged for something I cancelled.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0063",
+   "accountId": "QB-1022",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-05-23T09:01:00+00:00",
+   "amount": 237.17,
+   "merchant": "Kiln & Co",
+   "claim": "I was charged twice for the same order.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0079",
+   "accountId": "QB-1033",
+   "kind": "false_alarm",
+   "outcome": "legitimate",
+   "openedAt": "2026-06-01T19:20:00+00:00",
+   "amount": 463.66,
+   "merchant": "Harborview Hotels",
+   "claim": "I was charged for something I cancelled.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0053",
+   "accountId": "QB-1016",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-06-02T09:51:00+00:00",
+   "amount": 493.01,
+   "merchant": "Loomhouse",
+   "claim": "I cancelled and was still billed.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0056",
+   "accountId": "QB-1018",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-06-06T09:51:00+00:00",
+   "amount": 291.36,
+   "merchant": "Fernwood Outfitters",
+   "claim": "I returned the item and haven't been refunded.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0002",
+   "accountId": "QB-1001",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-06-09T09:05:00+00:00",
+   "amount": 115.64,
+   "merchant": "Birchline Furniture",
+   "claim": "I was charged twice for the same order.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0055",
+   "accountId": "QB-1017",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-06-20T09:42:00+00:00",
+   "amount": 42.29,
+   "merchant": "Pixelridge Store",
+   "claim": "I returned the item and haven't been refunded.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0012",
+   "accountId": "QB-1003",
+   "kind": "visible_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-06-22T14:10:00+00:00",
+   "amount": 1582.69,
+   "merchant": "Northgate Audio",
+   "claim": "I never received this order.",
+   "pointInTime": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0071",
+   "accountId": "QB-1029",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-06-25T09:09:00+00:00",
+   "amount": 110.27,
+   "merchant": "Pixelridge Store",
+   "claim": "I cancelled and was still billed.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0065",
+   "accountId": "QB-1023",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-06-27T09:03:00+00:00",
+   "amount": 113.63,
+   "merchant": "Cadence Fitness",
+   "claim": "I cancelled and was still billed.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0027",
+   "accountId": "QB-1008",
+   "kind": "visible_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-06-30T14:58:00+00:00",
+   "amount": 1596.14,
+   "merchant": "Cadence Fitness",
+   "claim": "I never received this order.",
+   "pointInTime": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0028",
+   "accountId": "QB-1009",
+   "kind": "latent_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-07-01T10:35:00+00:00",
+   "amount": 1113.5,
+   "merchant": "Kiln & Co",
+   "claim": "This purchase wasn't made by me.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": false,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0061",
+   "accountId": "QB-1021",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-07-02T09:25:00+00:00",
+   "amount": 249.53,
+   "merchant": "Streamwell",
+   "claim": "I returned the item and haven't been refunded.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0009",
+   "accountId": "QB-1002",
+   "kind": "visible_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-07-02T14:10:00+00:00",
+   "amount": 948.22,
+   "merchant": "Streamwell",
+   "claim": "I did not authorize this purchase.",
+   "pointInTime": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0015",
+   "accountId": "QB-1004",
+   "kind": "visible_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-07-06T14:43:00+00:00",
+   "amount": 1288.58,
+   "merchant": "Voltline Electronics",
+   "claim": "I did not authorize this purchase.",
+   "pointInTime": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0069",
+   "accountId": "QB-1027",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-07-08T09:41:00+00:00",
+   "amount": 285.7,
+   "merchant": "Cobalt Footwear",
+   "claim": "I was charged twice for the same order.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0059",
+   "accountId": "QB-1020",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-07-14T09:47:00+00:00",
+   "amount": 109.58,
+   "merchant": "Meridian Rail",
+   "claim": "I cancelled and was still billed.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0066",
+   "accountId": "QB-1024",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-07-20T09:43:00+00:00",
+   "amount": 43.82,
+   "merchant": "Fernwood Outfitters",
+   "claim": "I was charged twice for the same order.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0036",
+   "accountId": "QB-1011",
+   "kind": "latent_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-07-20T10:27:00+00:00",
+   "amount": 1565.15,
+   "merchant": "Meridian Rail",
+   "claim": "I don't recognize this charge.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": false,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0077",
+   "accountId": "QB-1032",
+   "kind": "false_alarm",
+   "outcome": "legitimate",
+   "openedAt": "2026-07-22T19:27:00+00:00",
+   "amount": 517.38,
+   "merchant": "Cadence Fitness",
+   "claim": "I was charged for something I cancelled.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0083",
+   "accountId": "QB-1035",
+   "kind": "false_alarm",
+   "outcome": "legitimate",
+   "openedAt": "2026-08-01T19:42:00+00:00",
+   "amount": 786.82,
+   "merchant": "Fernwood Outfitters",
+   "claim": "I was charged for something I cancelled.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0018",
+   "accountId": "QB-1005",
+   "kind": "visible_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-08-07T14:12:00+00:00",
+   "amount": 570.94,
+   "merchant": "Harborview Hotels",
+   "claim": "I did not authorize this purchase.",
+   "pointInTime": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0024",
+   "accountId": "QB-1007",
+   "kind": "visible_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-08-08T14:17:00+00:00",
+   "amount": 628.48,
+   "merchant": "Birchline Furniture",
+   "claim": "I did not authorize this purchase.",
+   "pointInTime": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0073",
+   "accountId": "QB-1030",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-08-14T09:26:00+00:00",
+   "amount": 227.09,
+   "merchant": "Voltline Electronics",
+   "claim": "I returned the item and haven't been refunded.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0003",
+   "accountId": "QB-1001",
+   "kind": "latent_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-08-14T10:39:00+00:00",
+   "amount": 1733.54,
+   "merchant": "Meridian Rail",
+   "claim": "I never received this order.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": false,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0057",
+   "accountId": "QB-1019",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-08-17T09:24:00+00:00",
+   "amount": 393.73,
+   "merchant": "Inkpot Books",
+   "claim": "I cancelled and was still billed.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0040",
+   "accountId": "QB-1012",
+   "kind": "latent_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-08-19T10:02:00+00:00",
+   "amount": 1551.29,
+   "merchant": "Hearthstone Home",
+   "claim": "I don't recognize this charge.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": false,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0052",
+   "accountId": "QB-1015",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-08-20T09:34:00+00:00",
+   "amount": 691.92,
+   "merchant": "Pixelridge Store",
+   "claim": "I returned the item and haven't been refunded.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0068",
+   "accountId": "QB-1026",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-08-26T09:39:00+00:00",
+   "amount": 314.5,
+   "merchant": "Harborview Hotels",
+   "claim": "I returned the item and haven't been refunded.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  },
+  {
+   "id": "CASE-0032",
+   "accountId": "QB-1010",
+   "kind": "latent_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-08-26T10:34:00+00:00",
+   "amount": 1573.02,
+   "merchant": "Northgate Audio",
+   "claim": "I never received this order.",
+   "pointInTime": {
+    "decision": "APPROVE",
+    "correct": false,
+    "onlyPastEvidence": true
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "correct": true,
+    "onlyPastEvidence": false
+   }
+  }
+ ],
+ "featured": [
+  {
+   "id": "CASE-0003",
+   "accountId": "QB-1001",
+   "kind": "latent_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-08-14T10:39:00+00:00",
+   "amount": 1733.54,
+   "merchant": "Meridian Rail",
+   "claim": "I never received this order.",
+   "kindLabel": "Fraud that surfaced later",
+   "holder": "Avery Okafor",
+   "timelineQueryDatasetId": "de8fa6d6-ecdd-47cd-a4a4-21ca617c5e7f",
+   "events": [
+    {
+     "id": "DSP-0001",
+     "ts": "2025-08-24T12:00:00+00:00",
+     "type": "dispute",
+     "text": "$36.31 at Meridian Rail: duplicate charge"
+    },
+    {
+     "id": "SCR-0001",
+     "ts": "2026-03-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.07: monthly model refresh"
+    },
+    {
+     "id": "SCR-0002",
+     "ts": "2026-04-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.05: monthly model refresh"
+    },
+    {
+     "id": "SCR-0003",
+     "ts": "2026-05-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.06: monthly model refresh"
+    },
+    {
+     "id": "SCR-0004",
+     "ts": "2026-06-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.06: monthly model refresh"
+    },
+    {
+     "id": "MSG-0001",
+     "ts": "2026-06-09T09:03:00+00:00",
+     "type": "message",
+     "author": "customer",
+     "text": "I was charged twice for the same order. Order #80728 shows two identical charges two minutes apart. Merchant: Birchline Furniture, $115.64."
+    },
+    {
+     "id": "DSP-0002",
+     "ts": "2026-06-09T09:05:00+00:00",
+     "type": "dispute",
+     "text": "$115.64 at Birchline Furniture: I was charged twice for the same order."
+    },
+    {
+     "id": "MSG-0002",
+     "ts": "2026-06-19T13:20:00+00:00",
+     "type": "message",
+     "author": "merchant",
+     "text": "Birchline Furniture: confirmed the billing error on DSP-0002 and issued a refund."
+    },
+    {
+     "id": "SCR-0005",
+     "ts": "2026-07-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.07: monthly model refresh"
+    },
+    {
+     "id": "SCR-0006",
+     "ts": "2026-08-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.04: monthly model refresh"
+    },
+    {
+     "id": "MSG-0003",
+     "ts": "2026-08-14T10:37:00+00:00",
+     "type": "message",
+     "author": "customer",
+     "text": "Hi, I never received this order. Meridian Rail, $1,733.54. Could you look into it? Thanks so much."
+    },
+    {
+     "id": "DSP-0003",
+     "ts": "2026-08-14T10:39:00+00:00",
+     "type": "dispute",
+     "text": "$1,733.54 at Meridian Rail: I never received this order."
+    },
+    {
+     "id": "DSP-0004",
+     "ts": "2026-08-20T16:05:00+00:00",
+     "type": "dispute",
+     "text": "$1,213.24 at Loomhouse: item not received"
+    },
+    {
+     "id": "MSG-0004",
+     "ts": "2026-08-20T16:07:00+00:00",
+     "type": "message",
+     "author": "customer",
+     "text": "Another order didn't arrive (DSP-0004): Loomhouse, $1,213.24."
+    },
+    {
+     "id": "DSP-0005",
+     "ts": "2026-08-21T16:06:00+00:00",
+     "type": "dispute",
+     "text": "$378.98 at Harborview Hotels: item not received"
+    },
+    {
+     "id": "MSG-0005",
+     "ts": "2026-08-21T16:08:00+00:00",
+     "type": "message",
+     "author": "customer",
+     "text": "Another order didn't arrive (DSP-0005): Harborview Hotels, $378.98."
+    },
+    {
+     "id": "DSP-0006",
+     "ts": "2026-08-27T16:07:00+00:00",
+     "type": "dispute",
+     "text": "$306.21 at Skylark Air: item not received"
+    },
+    {
+     "id": "MSG-0006",
+     "ts": "2026-08-27T16:09:00+00:00",
+     "type": "message",
+     "author": "customer",
+     "text": "Another order didn't arrive (DSP-0006): Skylark Air, $306.21."
+    },
+    {
+     "id": "SCR-0007",
+     "ts": "2026-09-10T06:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.65: dispute velocity: 4 disputes in 26 days"
+    },
+    {
+     "id": "MSG-0007",
+     "ts": "2026-09-16T09:30:00+00:00",
+     "type": "message",
+     "author": "merchant",
+     "text": "Meridian Rail evidence for DSP-0003: signed delivery confirmation, and the order was placed from the cardholder's usual device and IP."
+    },
+    {
+     "id": "MSG-0008",
+     "ts": "2026-09-18T17:45:00+00:00",
+     "type": "message",
+     "author": "fraud-team",
+     "text": "Investigation closed: confirmed first-party fraud on CASE-0003. Account restricted and refund clawed back."
+    },
+    {
+     "id": "SCR-0008",
+     "ts": "2026-09-18T18:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.91: fraud team confirmed first-party fraud"
+    }
+   ],
+   "snapshots": [
+    {
+     "asOf": "2026-07-24T10:39:00+00:00",
+     "riskScore": 0.07,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "MSG-0001",
+      "MSG-0002",
+      "SCR-0001",
+      "SCR-0002",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005"
+     ]
+    },
+    {
+     "asOf": "2026-07-31T10:39:00+00:00",
+     "riskScore": 0.07,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "MSG-0001",
+      "MSG-0002",
+      "SCR-0001",
+      "SCR-0002",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005"
+     ]
+    },
+    {
+     "asOf": "2026-08-07T10:39:00+00:00",
+     "riskScore": 0.04,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "MSG-0001",
+      "MSG-0002",
+      "SCR-0001",
+      "SCR-0002",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005",
+      "SCR-0006"
+     ]
+    },
+    {
+     "asOf": "2026-08-14T10:39:00+00:00",
+     "riskScore": 0.04,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 1,
+     "disputes90d": 2,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "DSP-0003",
+      "MSG-0001",
+      "MSG-0002",
+      "MSG-0003",
+      "SCR-0001",
+      "SCR-0002",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005",
+      "SCR-0006"
+     ]
+    },
+    {
+     "asOf": "2026-08-21T10:39:00+00:00",
+     "riskScore": 0.04,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 2,
+     "disputes90d": 3,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "DSP-0003",
+      "DSP-0004",
+      "MSG-0001",
+      "MSG-0002",
+      "MSG-0003",
+      "MSG-0004",
+      "SCR-0001",
+      "SCR-0002",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005",
+      "SCR-0006"
+     ]
+    },
+    {
+     "asOf": "2026-08-28T10:39:00+00:00",
+     "riskScore": 0.04,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 4,
+     "disputes90d": 5,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "DSP-0003",
+      "DSP-0004",
+      "DSP-0005",
+      "DSP-0006",
+      "MSG-0001",
+      "MSG-0002",
+      "MSG-0003",
+      "MSG-0004",
+      "MSG-0005",
+      "MSG-0006",
+      "SCR-0001",
+      "SCR-0002",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005",
+      "SCR-0006"
+     ]
+    },
+    {
+     "asOf": "2026-09-04T10:39:00+00:00",
+     "riskScore": 0.04,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 4,
+     "disputes90d": 5,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "DSP-0003",
+      "DSP-0004",
+      "DSP-0005",
+      "DSP-0006",
+      "MSG-0001",
+      "MSG-0002",
+      "MSG-0003",
+      "MSG-0004",
+      "MSG-0005",
+      "MSG-0006",
+      "SCR-0001",
+      "SCR-0002",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005",
+      "SCR-0006"
+     ]
+    },
+    {
+     "asOf": "2026-09-11T10:39:00+00:00",
+     "riskScore": 0.65,
+     "riskReason": "dispute velocity: 4 disputes in 26 days",
+     "disputes30d": 4,
+     "disputes90d": 4,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "DSP-0003",
+      "DSP-0004",
+      "DSP-0005",
+      "DSP-0006",
+      "MSG-0001",
+      "MSG-0002",
+      "MSG-0003",
+      "MSG-0004",
+      "MSG-0005",
+      "MSG-0006",
+      "SCR-0002",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005",
+      "SCR-0006",
+      "SCR-0007"
+     ]
+    },
+    {
+     "asOf": "2026-09-18T10:39:00+00:00",
+     "riskScore": 0.65,
+     "riskReason": "dispute velocity: 4 disputes in 26 days",
+     "disputes30d": 3,
+     "disputes90d": 4,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "DSP-0003",
+      "DSP-0004",
+      "DSP-0005",
+      "DSP-0006",
+      "MSG-0001",
+      "MSG-0002",
+      "MSG-0003",
+      "MSG-0004",
+      "MSG-0005",
+      "MSG-0006",
+      "MSG-0007",
+      "SCR-0002",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005",
+      "SCR-0006",
+      "SCR-0007"
+     ]
+    },
+    {
+     "asOf": "2026-09-25T10:39:00+00:00",
+     "riskScore": 0.91,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 1,
+     "disputes90d": 4,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "DSP-0003",
+      "DSP-0004",
+      "DSP-0005",
+      "DSP-0006",
+      "MSG-0001",
+      "MSG-0002",
+      "MSG-0003",
+      "MSG-0004",
+      "MSG-0005",
+      "MSG-0006",
+      "MSG-0007",
+      "MSG-0008",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005",
+      "SCR-0006",
+      "SCR-0007",
+      "SCR-0008"
+     ]
+    },
+    {
+     "asOf": "2026-10-02T10:39:00+00:00",
+     "riskScore": 0.91,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 4,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "DSP-0003",
+      "DSP-0004",
+      "DSP-0005",
+      "DSP-0006",
+      "MSG-0001",
+      "MSG-0002",
+      "MSG-0003",
+      "MSG-0004",
+      "MSG-0005",
+      "MSG-0006",
+      "MSG-0007",
+      "MSG-0008",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005",
+      "SCR-0006",
+      "SCR-0007",
+      "SCR-0008"
+     ]
+    },
+    {
+     "asOf": "2026-10-09T10:39:00+00:00",
+     "riskScore": 0.91,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 4,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "DSP-0003",
+      "DSP-0004",
+      "DSP-0005",
+      "DSP-0006",
+      "MSG-0001",
+      "MSG-0002",
+      "MSG-0003",
+      "MSG-0004",
+      "MSG-0005",
+      "MSG-0006",
+      "MSG-0007",
+      "MSG-0008",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005",
+      "SCR-0006",
+      "SCR-0007",
+      "SCR-0008"
+     ]
+    },
+    {
+     "asOf": "2026-10-14T04:03:31+00:00",
+     "riskScore": 0.91,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 4,
+     "visibleEventIds": [
+      "DSP-0001",
+      "DSP-0002",
+      "DSP-0003",
+      "DSP-0004",
+      "DSP-0005",
+      "DSP-0006",
+      "MSG-0001",
+      "MSG-0002",
+      "MSG-0003",
+      "MSG-0004",
+      "MSG-0005",
+      "MSG-0006",
+      "MSG-0007",
+      "MSG-0008",
+      "SCR-0003",
+      "SCR-0004",
+      "SCR-0005",
+      "SCR-0006",
+      "SCR-0007",
+      "SCR-0008"
+     ]
+    }
+   ],
+   "pointInTime": {
+    "decision": "APPROVE",
+    "rationale": "Risk score is low (0.04) and stable across six months. The prior Birchline dispute was confirmed by the merchant as a billing error, and the other prior dispute was a small duplicate charge. Nothing contradicts the non-receipt claim, and there is no sign of first-party fraud.",
+    "evidence": [
+     "SCR-0006",
+     "SCR-0005",
+     "DSP-0002",
+     "MSG-0002",
+     "DSP-0001",
+     "MSG-0003"
+    ],
+    "correct": false,
+    "onlyPastEvidence": true,
+    "citedFromFuture": []
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "rationale": "Merchant provided signed delivery confirmation and a usual device/IP for this order. The cardholder then filed three more 'not received' disputes within two weeks. The fraud team confirmed first-party fraud on this case, the account is restricted, and the risk score is 0.91.",
+    "evidence": [
+     "MSG-0007",
+     "MSG-0008",
+     "SCR-0008",
+     "SCR-0007",
+     "DSP-0004",
+     "DSP-0005",
+     "DSP-0006"
+    ],
+    "correct": true,
+    "onlyPastEvidence": false,
+    "citedFromFuture": [
+     "MSG-0007",
+     "MSG-0008",
+     "SCR-0008",
+     "SCR-0007",
+     "DSP-0004",
+     "DSP-0005",
+     "DSP-0006"
+    ]
+   }
+  },
+  {
+   "id": "CASE-0077",
+   "accountId": "QB-1032",
+   "kind": "false_alarm",
+   "outcome": "legitimate",
+   "openedAt": "2026-07-22T19:27:00+00:00",
+   "amount": 517.38,
+   "merchant": "Cadence Fitness",
+   "claim": "I was charged for something I cancelled.",
+   "kindLabel": "False alarm",
+   "holder": "Oakley Lindqvist",
+   "timelineQueryDatasetId": "59e885ae-e73d-40f5-a388-f8b0e09b7f4a",
+   "events": [
+    {
+     "id": "SCR-0233",
+     "ts": "2026-03-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.13: monthly model refresh"
+    },
+    {
+     "id": "SCR-0234",
+     "ts": "2026-04-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.12: monthly model refresh"
+    },
+    {
+     "id": "SCR-0235",
+     "ts": "2026-05-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.15: monthly model refresh"
+    },
+    {
+     "id": "DSP-0076",
+     "ts": "2026-05-26T18:00:00+00:00",
+     "type": "dispute",
+     "text": "$63.65 at Voltline Electronics: unauthorized charge"
+    },
+    {
+     "id": "SCR-0236",
+     "ts": "2026-06-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.13: monthly model refresh"
+    },
+    {
+     "id": "SCR-0237",
+     "ts": "2026-07-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.16: monthly model refresh"
+    },
+    {
+     "id": "MSG-0123",
+     "ts": "2026-07-04T20:15:00+00:00",
+     "type": "message",
+     "author": "system",
+     "text": "New device enrolled and mailing address changed on the same day."
+    },
+    {
+     "id": "SCR-0238",
+     "ts": "2026-07-05T06:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.60: new device + address change within 24h"
+    },
+    {
+     "id": "MSG-0124",
+     "ts": "2026-07-22T19:25:00+00:00",
+     "type": "message",
+     "author": "customer",
+     "text": "This is the SECOND time Cadence Fitness has done this!! $517.38 for something I cancelled weeks ago. Fix it now."
+    },
+    {
+     "id": "DSP-0077",
+     "ts": "2026-07-22T19:27:00+00:00",
+     "type": "dispute",
+     "text": "$517.38 at Cadence Fitness: I was charged for something I cancelled."
+    },
+    {
+     "id": "MSG-0125",
+     "ts": "2026-07-26T10:05:00+00:00",
+     "type": "message",
+     "author": "support",
+     "text": "Identity verified on a recorded call; customer moved house and replaced their phone, which explains the device and address change."
+    },
+    {
+     "id": "MSG-0126",
+     "ts": "2026-07-28T14:00:00+00:00",
+     "type": "message",
+     "author": "merchant",
+     "text": "Cadence Fitness: subscription cancellation was not processed on our side. Refund issued for DSP-0077."
+    },
+    {
+     "id": "SCR-0239",
+     "ts": "2026-07-29T06:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.11: risk cleared after identity verification"
+    },
+    {
+     "id": "SCR-0240",
+     "ts": "2026-09-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.11: monthly model refresh"
+    },
+    {
+     "id": "SCR-0241",
+     "ts": "2026-10-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.13: monthly model refresh"
+    }
+   ],
+   "snapshots": [
+    {
+     "asOf": "2026-07-01T19:27:00+00:00",
+     "riskScore": 0.16,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0076",
+      "SCR-0233",
+      "SCR-0234",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237"
+     ]
+    },
+    {
+     "asOf": "2026-07-08T19:27:00+00:00",
+     "riskScore": 0.6,
+     "riskReason": "new device + address change within 24h",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0076",
+      "MSG-0123",
+      "SCR-0233",
+      "SCR-0234",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238"
+     ]
+    },
+    {
+     "asOf": "2026-07-15T19:27:00+00:00",
+     "riskScore": 0.6,
+     "riskReason": "new device + address change within 24h",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0076",
+      "MSG-0123",
+      "SCR-0233",
+      "SCR-0234",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238"
+     ]
+    },
+    {
+     "asOf": "2026-07-22T19:27:00+00:00",
+     "riskScore": 0.6,
+     "riskReason": "new device + address change within 24h",
+     "disputes30d": 1,
+     "disputes90d": 2,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "SCR-0233",
+      "SCR-0234",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238"
+     ]
+    },
+    {
+     "asOf": "2026-07-29T19:27:00+00:00",
+     "riskScore": 0.11,
+     "riskReason": "risk cleared after identity verification",
+     "disputes30d": 1,
+     "disputes90d": 2,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0234",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239"
+     ]
+    },
+    {
+     "asOf": "2026-08-05T19:27:00+00:00",
+     "riskScore": 0.11,
+     "riskReason": "risk cleared after identity verification",
+     "disputes30d": 1,
+     "disputes90d": 2,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0234",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239"
+     ]
+    },
+    {
+     "asOf": "2026-08-12T19:27:00+00:00",
+     "riskScore": 0.11,
+     "riskReason": "risk cleared after identity verification",
+     "disputes30d": 1,
+     "disputes90d": 2,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0234",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239"
+     ]
+    },
+    {
+     "asOf": "2026-08-19T19:27:00+00:00",
+     "riskScore": 0.11,
+     "riskReason": "risk cleared after identity verification",
+     "disputes30d": 1,
+     "disputes90d": 2,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0234",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239"
+     ]
+    },
+    {
+     "asOf": "2026-08-26T19:27:00+00:00",
+     "riskScore": 0.11,
+     "riskReason": "risk cleared after identity verification",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0234",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239"
+     ]
+    },
+    {
+     "asOf": "2026-09-02T19:27:00+00:00",
+     "riskScore": 0.11,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239",
+      "SCR-0240"
+     ]
+    },
+    {
+     "asOf": "2026-09-09T19:27:00+00:00",
+     "riskScore": 0.11,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239",
+      "SCR-0240"
+     ]
+    },
+    {
+     "asOf": "2026-09-16T19:27:00+00:00",
+     "riskScore": 0.11,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239",
+      "SCR-0240"
+     ]
+    },
+    {
+     "asOf": "2026-09-23T19:27:00+00:00",
+     "riskScore": 0.11,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239",
+      "SCR-0240"
+     ]
+    },
+    {
+     "asOf": "2026-09-30T19:27:00+00:00",
+     "riskScore": 0.11,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0235",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239",
+      "SCR-0240"
+     ]
+    },
+    {
+     "asOf": "2026-10-07T19:27:00+00:00",
+     "riskScore": 0.13,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239",
+      "SCR-0240",
+      "SCR-0241"
+     ]
+    },
+    {
+     "asOf": "2026-10-14T04:03:31+00:00",
+     "riskScore": 0.13,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0076",
+      "DSP-0077",
+      "MSG-0123",
+      "MSG-0124",
+      "MSG-0125",
+      "MSG-0126",
+      "SCR-0236",
+      "SCR-0237",
+      "SCR-0238",
+      "SCR-0239",
+      "SCR-0240",
+      "SCR-0241"
+     ]
+    }
+   ],
+   "pointInTime": {
+    "decision": "APPROVE",
+    "rationale": "Claim of a charge after cancellation is a common legitimate dispute type. The 0.60 risk score reflects a new device and address change, not dispute abuse. Prior history is one small dispute at a different merchant. The 'second time' claim isn't in the dispute record, but that alone is weak evidence of first-party fraud.",
+    "evidence": [
+     "DSP-0077",
+     "DSP-0076",
+     "SCR-0238",
+     "MSG-0124"
+    ],
+    "correct": true,
+    "onlyPastEvidence": true,
+    "citedFromFuture": []
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "rationale": "Cadence Fitness admitted the cancellation wasn't processed and says it refunded DSP-0077. The July risk spike was explained by a house move and new phone, and cleared after identity verification. Risk is low (0.13). Reconcile with the merchant refund to avoid paying twice.",
+    "evidence": [
+     "MSG-0126",
+     "MSG-0125",
+     "SCR-0239",
+     "SCR-0241"
+    ],
+    "correct": true,
+    "onlyPastEvidence": false,
+    "citedFromFuture": [
+     "MSG-0126",
+     "MSG-0125",
+     "SCR-0239",
+     "SCR-0241"
+    ]
+   }
+  },
+  {
+   "id": "CASE-0015",
+   "accountId": "QB-1004",
+   "kind": "visible_fraud",
+   "outcome": "first_party_fraud",
+   "openedAt": "2026-07-06T14:43:00+00:00",
+   "amount": 1288.58,
+   "merchant": "Voltline Electronics",
+   "claim": "I did not authorize this purchase.",
+   "kindLabel": "Fraud visible at the time",
+   "holder": "Morgan Yilmaz",
+   "timelineQueryDatasetId": "22ef58e0-f3b4-47f6-b38a-0dab42a773f8",
+   "events": [
+    {
+     "id": "SCR-0022",
+     "ts": "2026-03-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.48: monthly model refresh"
+    },
+    {
+     "id": "SCR-0023",
+     "ts": "2026-04-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.51: monthly model refresh"
+    },
+    {
+     "id": "SCR-0024",
+     "ts": "2026-05-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.49: monthly model refresh"
+    },
+    {
+     "id": "DSP-0013",
+     "ts": "2026-05-03T15:10:00+00:00",
+     "type": "dispute",
+     "text": "$211.33 at Harborview Hotels: unauthorized charge"
+    },
+    {
+     "id": "MSG-0021",
+     "ts": "2026-05-03T15:12:00+00:00",
+     "type": "message",
+     "author": "customer",
+     "text": "Filing another dispute (DSP-0013) for Harborview Hotels, $211.33. Unauthorized charge."
+    },
+    {
+     "id": "DSP-0014",
+     "ts": "2026-05-10T15:11:00+00:00",
+     "type": "dispute",
+     "text": "$258.74 at Northgate Audio: item not received"
+    },
+    {
+     "id": "MSG-0022",
+     "ts": "2026-05-10T15:13:00+00:00",
+     "type": "message",
+     "author": "customer",
+     "text": "Filing another dispute (DSP-0014) for Northgate Audio, $258.74. Item not received."
+    },
+    {
+     "id": "SCR-0025",
+     "ts": "2026-06-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.52: monthly model refresh"
+    },
+    {
+     "id": "SCR-0027",
+     "ts": "2026-06-27T06:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.62: dispute velocity: 2 disputes in 70 days"
+    },
+    {
+     "id": "MSG-0023",
+     "ts": "2026-06-28T11:40:00+00:00",
+     "type": "message",
+     "author": "support",
+     "text": "Note: customer's third chargeback request this quarter; prior two claimed non-delivery on orders the carrier marked delivered."
+    },
+    {
+     "id": "SCR-0026",
+     "ts": "2026-07-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.48: monthly model refresh"
+    },
+    {
+     "id": "MSG-0024",
+     "ts": "2026-07-06T14:41:00+00:00",
+     "type": "message",
+     "author": "customer",
+     "text": "I did not authorize this purchase. It's from Voltline Electronics, $1,288.58. I want my money back today."
+    },
+    {
+     "id": "DSP-0015",
+     "ts": "2026-07-06T14:43:00+00:00",
+     "type": "dispute",
+     "text": "$1,288.58 at Voltline Electronics: I did not authorize this purchase."
+    },
+    {
+     "id": "MSG-0025",
+     "ts": "2026-07-31T09:30:00+00:00",
+     "type": "message",
+     "author": "merchant",
+     "text": "Voltline Electronics evidence for DSP-0015: signed delivery confirmation, and the order was placed from the cardholder's usual device and IP."
+    },
+    {
+     "id": "MSG-0026",
+     "ts": "2026-08-02T17:45:00+00:00",
+     "type": "message",
+     "author": "fraud-team",
+     "text": "Investigation closed: confirmed first-party fraud on CASE-0015. Account restricted and refund clawed back."
+    },
+    {
+     "id": "SCR-0028",
+     "ts": "2026-08-02T18:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.95: fraud team confirmed first-party fraud"
+    }
+   ],
+   "snapshots": [
+    {
+     "asOf": "2026-06-15T14:43:00+00:00",
+     "riskScore": 0.52,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 2,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "MSG-0021",
+      "MSG-0022",
+      "SCR-0022",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025"
+     ]
+    },
+    {
+     "asOf": "2026-06-22T14:43:00+00:00",
+     "riskScore": 0.52,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 2,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "MSG-0021",
+      "MSG-0022",
+      "SCR-0022",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025"
+     ]
+    },
+    {
+     "asOf": "2026-06-29T14:43:00+00:00",
+     "riskScore": 0.62,
+     "riskReason": "dispute velocity: 2 disputes in 70 days",
+     "disputes30d": 0,
+     "disputes90d": 2,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "SCR-0022",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0027"
+     ]
+    },
+    {
+     "asOf": "2026-07-06T14:43:00+00:00",
+     "riskScore": 0.48,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 1,
+     "disputes90d": 3,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "SCR-0022",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027"
+     ]
+    },
+    {
+     "asOf": "2026-07-13T14:43:00+00:00",
+     "riskScore": 0.48,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 1,
+     "disputes90d": 3,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "SCR-0022",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027"
+     ]
+    },
+    {
+     "asOf": "2026-07-20T14:43:00+00:00",
+     "riskScore": 0.48,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 1,
+     "disputes90d": 3,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "SCR-0022",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027"
+     ]
+    },
+    {
+     "asOf": "2026-07-27T14:43:00+00:00",
+     "riskScore": 0.48,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 1,
+     "disputes90d": 3,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "SCR-0022",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027"
+     ]
+    },
+    {
+     "asOf": "2026-08-03T14:43:00+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 1,
+     "disputes90d": 2,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    },
+    {
+     "asOf": "2026-08-10T14:43:00+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    },
+    {
+     "asOf": "2026-08-17T14:43:00+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    },
+    {
+     "asOf": "2026-08-24T14:43:00+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    },
+    {
+     "asOf": "2026-08-31T14:43:00+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    },
+    {
+     "asOf": "2026-09-07T14:43:00+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    },
+    {
+     "asOf": "2026-09-14T14:43:00+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    },
+    {
+     "asOf": "2026-09-21T14:43:00+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    },
+    {
+     "asOf": "2026-09-28T14:43:00+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    },
+    {
+     "asOf": "2026-10-05T14:43:00+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 0,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    },
+    {
+     "asOf": "2026-10-12T14:43:00+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 0,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    },
+    {
+     "asOf": "2026-10-14T04:03:31+00:00",
+     "riskScore": 0.95,
+     "riskReason": "fraud team confirmed first-party fraud",
+     "disputes30d": 0,
+     "disputes90d": 0,
+     "visibleEventIds": [
+      "DSP-0013",
+      "DSP-0014",
+      "DSP-0015",
+      "MSG-0021",
+      "MSG-0022",
+      "MSG-0023",
+      "MSG-0024",
+      "MSG-0025",
+      "MSG-0026",
+      "SCR-0023",
+      "SCR-0024",
+      "SCR-0025",
+      "SCR-0026",
+      "SCR-0027",
+      "SCR-0028"
+     ]
+    }
+   ],
+   "pointInTime": {
+    "decision": "ESCALATE",
+    "rationale": "This is the third dispute in about 65 days, and the amount is much larger than the prior two. The 0.62 velocity flag (SCR-0027) was followed by a routine refresh back to 0.48 (SCR-0026), so the lower score doesn't clear the pattern. The support note MSG-0023 conflicts with the dispute history, so I gave it little weight.",
+    "evidence": [
+     "DSP-0015",
+     "DSP-0014",
+     "DSP-0013",
+     "SCR-0027",
+     "SCR-0026",
+     "MSG-0024"
+    ],
+    "correct": true,
+    "onlyPastEvidence": true,
+    "citedFromFuture": []
+   },
+   "currentValues": {
+    "decision": "ESCALATE",
+    "rationale": "Fraud team confirmed first-party fraud on this exact dispute (CASE-0015). Merchant evidence shows signed delivery and an order from the cardholder's usual device and IP. Prior disputes follow a similar pattern, and the account is restricted with a 0.95 risk score.",
+    "evidence": [
+     "SCR-0028",
+     "MSG-0026",
+     "MSG-0025",
+     "MSG-0023"
+    ],
+    "correct": true,
+    "onlyPastEvidence": false,
+    "citedFromFuture": [
+     "SCR-0028",
+     "MSG-0026",
+     "MSG-0025"
+    ]
+   }
+  },
+  {
+   "id": "CASE-0059",
+   "accountId": "QB-1020",
+   "kind": "legitimate",
+   "outcome": "legitimate",
+   "openedAt": "2026-07-14T09:47:00+00:00",
+   "amount": 109.58,
+   "merchant": "Meridian Rail",
+   "claim": "I cancelled and was still billed.",
+   "kindLabel": "Legitimate",
+   "holder": "Peyton Delacroix",
+   "timelineQueryDatasetId": "9d536ec1-4bb3-41f3-8c30-967888fd2b1c",
+   "events": [
+    {
+     "id": "DSP-0058",
+     "ts": "2025-09-24T12:00:00+00:00",
+     "type": "dispute",
+     "text": "$28.21 at Cadence Fitness: duplicate charge"
+    },
+    {
+     "id": "SCR-0136",
+     "ts": "2026-03-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.05: monthly model refresh"
+    },
+    {
+     "id": "SCR-0137",
+     "ts": "2026-04-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.07: monthly model refresh"
+    },
+    {
+     "id": "SCR-0138",
+     "ts": "2026-05-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.07: monthly model refresh"
+    },
+    {
+     "id": "SCR-0139",
+     "ts": "2026-06-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.07: monthly model refresh"
+    },
+    {
+     "id": "SCR-0140",
+     "ts": "2026-07-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.07: monthly model refresh"
+    },
+    {
+     "id": "MSG-0097",
+     "ts": "2026-07-14T09:45:00+00:00",
+     "type": "message",
+     "author": "customer",
+     "text": "I cancelled and was still billed. I cancelled on the website and have the confirmation email for #79646. Merchant: Meridian Rail, $109.58."
+    },
+    {
+     "id": "DSP-0059",
+     "ts": "2026-07-14T09:47:00+00:00",
+     "type": "dispute",
+     "text": "$109.58 at Meridian Rail: I cancelled and was still billed."
+    },
+    {
+     "id": "MSG-0098",
+     "ts": "2026-07-19T13:20:00+00:00",
+     "type": "message",
+     "author": "merchant",
+     "text": "Meridian Rail: confirmed the billing error on DSP-0059 and issued a refund."
+    },
+    {
+     "id": "SCR-0141",
+     "ts": "2026-08-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.05: monthly model refresh"
+    },
+    {
+     "id": "SCR-0142",
+     "ts": "2026-09-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.06: monthly model refresh"
+    },
+    {
+     "id": "SCR-0143",
+     "ts": "2026-10-01T04:00:00+00:00",
+     "type": "score",
+     "text": "Risk score 0.10: monthly model refresh"
+    }
+   ],
+   "snapshots": [
+    {
+     "asOf": "2026-06-23T09:47:00+00:00",
+     "riskScore": 0.07,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 0,
+     "visibleEventIds": [
+      "DSP-0058",
+      "SCR-0136",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139"
+     ]
+    },
+    {
+     "asOf": "2026-06-30T09:47:00+00:00",
+     "riskScore": 0.07,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 0,
+     "visibleEventIds": [
+      "DSP-0058",
+      "SCR-0136",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139"
+     ]
+    },
+    {
+     "asOf": "2026-07-07T09:47:00+00:00",
+     "riskScore": 0.07,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 0,
+     "visibleEventIds": [
+      "DSP-0058",
+      "SCR-0136",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140"
+     ]
+    },
+    {
+     "asOf": "2026-07-14T09:47:00+00:00",
+     "riskScore": 0.07,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 1,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "SCR-0136",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140"
+     ]
+    },
+    {
+     "asOf": "2026-07-21T09:47:00+00:00",
+     "riskScore": 0.07,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 1,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0136",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140"
+     ]
+    },
+    {
+     "asOf": "2026-07-28T09:47:00+00:00",
+     "riskScore": 0.07,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 1,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0136",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140"
+     ]
+    },
+    {
+     "asOf": "2026-08-04T09:47:00+00:00",
+     "riskScore": 0.05,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 1,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0136",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141"
+     ]
+    },
+    {
+     "asOf": "2026-08-11T09:47:00+00:00",
+     "riskScore": 0.05,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 1,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0136",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141"
+     ]
+    },
+    {
+     "asOf": "2026-08-18T09:47:00+00:00",
+     "riskScore": 0.05,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0136",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141"
+     ]
+    },
+    {
+     "asOf": "2026-08-25T09:47:00+00:00",
+     "riskScore": 0.05,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0136",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141"
+     ]
+    },
+    {
+     "asOf": "2026-09-01T09:47:00+00:00",
+     "riskScore": 0.06,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141",
+      "SCR-0142"
+     ]
+    },
+    {
+     "asOf": "2026-09-08T09:47:00+00:00",
+     "riskScore": 0.06,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141",
+      "SCR-0142"
+     ]
+    },
+    {
+     "asOf": "2026-09-15T09:47:00+00:00",
+     "riskScore": 0.06,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141",
+      "SCR-0142"
+     ]
+    },
+    {
+     "asOf": "2026-09-22T09:47:00+00:00",
+     "riskScore": 0.06,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141",
+      "SCR-0142"
+     ]
+    },
+    {
+     "asOf": "2026-09-29T09:47:00+00:00",
+     "riskScore": 0.06,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0137",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141",
+      "SCR-0142"
+     ]
+    },
+    {
+     "asOf": "2026-10-06T09:47:00+00:00",
+     "riskScore": 0.1,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 1,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141",
+      "SCR-0142",
+      "SCR-0143"
+     ]
+    },
+    {
+     "asOf": "2026-10-13T09:47:00+00:00",
+     "riskScore": 0.1,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 0,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141",
+      "SCR-0142",
+      "SCR-0143"
+     ]
+    },
+    {
+     "asOf": "2026-10-14T04:03:31+00:00",
+     "riskScore": 0.1,
+     "riskReason": "monthly model refresh",
+     "disputes30d": 0,
+     "disputes90d": 0,
+     "visibleEventIds": [
+      "DSP-0058",
+      "DSP-0059",
+      "MSG-0097",
+      "MSG-0098",
+      "SCR-0138",
+      "SCR-0139",
+      "SCR-0140",
+      "SCR-0141",
+      "SCR-0142",
+      "SCR-0143"
+     ]
+    }
+   ],
+   "pointInTime": {
+    "decision": "APPROVE",
+    "rationale": "Low, stable risk score (0.07) with no spikes. Only one prior dispute in the past year, for an unrelated merchant. The customer gave a specific claim, citing a website cancellation and a confirmation email for #79646. No signs of first-party fraud.",
+    "evidence": [
+     "SCR-0140",
+     "DSP-0058",
+     "MSG-0097"
+    ],
+    "correct": true,
+    "onlyPastEvidence": true,
+    "citedFromFuture": []
+   },
+   "currentValues": {
+    "decision": "APPROVE",
+    "rationale": "Cardholder cancelled online and has a confirmation email. The merchant confirmed the billing error and issued a refund. Risk is low (0.10) with only one prior unrelated dispute. No first-party fraud signals. Check that the merchant's refund isn't duplicated when issuing the credit.",
+    "evidence": [
+     "MSG-0097",
+     "MSG-0098",
+     "SCR-0143",
+     "DSP-0058"
+    ],
+    "correct": true,
+    "onlyPastEvidence": false,
+    "citedFromFuture": [
+     "MSG-0098",
+     "SCR-0143"
+    ]
+   }
+  }
+ ]
+}
