@@ -83,7 +83,7 @@ gateway key stored as the Chalk secret `CHALK_ROUTER_API_KEY` (`chalk router api
 
 ```bash
 chalk apply --branch time-correct-evals     # deploy the features to a branch
-./build_datasets.py                          # two offline queries -> two datasets
+./build_datasets.py # two offline queries -> two datasets
 ./evals.py smoke                             # one agent call, to check the model gateway
 ./evals.py run                               # both evaluations; results in results/
 ```

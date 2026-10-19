@@ -14,7 +14,7 @@ the context the agent will see:
 - current_values: every case is queried as of now, which is what a replay built on "today's"
   feature table gives you. It includes everything that happened after the decision.
 
-    ./build_datasets.py [--branch time-correct-evals]
+    ./build_datasets.py
 
 Credentials come from your existing `chalk login` (or CHALK_CLIENT_ID / CHALK_CLIENT_SECRET / CHALK_API_SERVER /
 CHALK_ENVIRONMENT_ID). Writes results/datasets/*.jsonl and results/queries.json.
@@ -22,7 +22,6 @@ CHALK_ENVIRONMENT_ID). Writes results/datasets/*.jsonl and results/queries.json.
 
 from __future__ import annotations
 
-import argparse
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -121,10 +120,6 @@ def to_eval_row(case: tuple, features: dict, evidence_times: dict[str, str]) -> 
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--branch", default="time-correct-evals")
-    args = parser.parse_args()
-
     from disputes.history_data import CASES, DISPUTES, MESSAGES, SCORE_UPDATES
 
     # When every piece of evidence happened, for the scorer that flags rationales citing the future.
@@ -136,7 +131,7 @@ def main() -> None:
     for rid, account_id, *_rest, ts in MESSAGES:
         evidence.setdefault(account_id, {})[rid] = ts.isoformat()
 
-    client = chalk_client(args.branch)
+    client = chalk_client('time-correct-evals')
     now = datetime.now(timezone.utc).replace(microsecond=0)
     case_ids = [c[0] for c in CASES]
     variants = {
@@ -144,7 +139,7 @@ def main() -> None:
         "current_values": [now] * len(CASES),
     }
     (OUT / "datasets").mkdir(parents=True, exist_ok=True)
-    queries = {"branch": args.branch, "run_at": now.isoformat()}
+    queries = {"branch": 'time-correct-evals', "run_at": now.isoformat()}
     by_id = {c[0]: c for c in CASES}
     for variant, times in variants.items():
         dataset_id, rows = query(client, case_ids, times, f"dispute-review-{variant}")
