@@ -7,7 +7,7 @@
 """Evaluate the dispute-review agent twice: on point-in-time context and on today's values.
 
 The task and both scorers are Chalk functions; importing this file deploys them. Run it from a
-directory whose `chalk config` points at the environment (or export CHALK_CLIENT_ID /
+directory whose your existing `chalk login` points at the environment (or export CHALK_CLIENT_ID /
 CHALK_CLIENT_SECRET / CHALK_API_SERVER / CHALK_ENVIRONMENT_ID):
 
     ./evals.py smoke                 # one remote call, to check the model gateway

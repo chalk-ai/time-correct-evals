@@ -100,3 +100,9 @@ The agent model defaults to `anthropic/claude-sonnet-5-5`; set `DISPUTE_AGENT_MO
 ## License
 
 Apache-2.0.
+
+## Local authentication
+
+The SDK reads credentials, API host, and the selected environment from your existing
+`chalk login` in `~/.chalk.yml`, including project-scoped and default logins.
+Standard `CHALK_*` environment overrides remain supported.
