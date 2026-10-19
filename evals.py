@@ -7,8 +7,7 @@
 """Evaluate the dispute-review agent twice: on point-in-time context and on today's values.
 
 The task and both scorers are Chalk functions; importing this file deploys them. Run it from a
-directory whose `chalk config` points at the environment (or export CHALK_CLIENT_ID /
-CHALK_CLIENT_SECRET / CHALK_API_SERVER / CHALK_ENVIRONMENT_ID):
+directory covered by your existing `chalk login`:
 
     ./evals.py smoke                 # one remote call, to check the model gateway
     ./evals.py run                   # upload both datasets, run both evaluations, save results
@@ -47,11 +46,6 @@ Reply with JSON only, no prose around it:
     memory="2Gi",
     concurrency=12,
     env={
-        # The platform sets its own CHALK_API_SERVER inside the container, so the gateway URL
-        # travels under a name of its own.
-        "ROUTER_BASE_URL": os.environ.get("ROUTER_BASE_URL")
-        or f"{os.environ.get('CHALK_API_SERVER', 'https://api.chalk.ai').rstrip('/')}/v1/router",
-        "ROUTER_ENVIRONMENT_ID": os.environ.get("CHALK_ENVIRONMENT_ID", ""),
         "DISPUTE_AGENT_MODEL": MODEL,
         "ROUTER_API_KEY": Secret.from_chalk_env("CHALK_ROUTER_API_KEY"),
     },
@@ -71,9 +65,9 @@ def review_dispute(
         "claim": claim,
     }
     client = anthropic.Anthropic(
-        base_url=os.environ["ROUTER_BASE_URL"],
+        base_url=os.environ["CHALK_API_SERVER"].rstrip("/") + "/v1/router",
         api_key=os.environ["ROUTER_API_KEY"],
-        default_headers={"X-Chalk-Env-Id": os.environ["ROUTER_ENVIRONMENT_ID"]},
+        default_headers={"X-Chalk-Env-Id": os.environ["CHALK_ENVIRONMENT_ID"]},
     )
     message = client.messages.create(
         model=os.environ["DISPUTE_AGENT_MODEL"],

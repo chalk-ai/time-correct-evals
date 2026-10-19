@@ -83,7 +83,7 @@ gateway key stored as the Chalk secret `CHALK_ROUTER_API_KEY` (`chalk router api
 
 ```bash
 chalk apply --branch time-correct-evals     # deploy the features to a branch
-./build_datasets.py                          # two offline queries -> two datasets
+./build_datasets.py # two offline queries -> two datasets
 ./evals.py smoke                             # one agent call, to check the model gateway
 ./evals.py run                               # both evaluations; results in results/
 ```
@@ -100,3 +100,9 @@ The agent model defaults to `anthropic/claude-sonnet-5-5`; set `DISPUTE_AGENT_MO
 ## License
 
 Apache-2.0.
+
+## Local authentication
+
+The SDK reads credentials, API host, and the selected environment from your existing
+`chalk login` in `~/.chalk.yml`, including project-scoped and default logins.
+Standard `CHALK_*` environment overrides remain supported.
